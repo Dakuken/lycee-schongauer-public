@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "axios": "./axios.js",
+    "hammerjs": "./hammerjs.js"
+  }
+}

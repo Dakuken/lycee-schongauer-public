@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Formations- Lycée Schongauer</title>
+  <meta charset="utf-8"/>
+  <link rel="icon" href="/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="../../output.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Page pour voir toutes les formations du lycée martin schongauer"/>
+  <link rel="stylesheet" type="text/css" href="./generale-gestion.css"/>
+  <script type="module" src="../../dist/components/navbar/navbar.js"></script>
+  <script type="module" src="../../dist/pages/gestion/formations.js"></script>
+</head>
+<body style="background-color: #F9FAFB">
+<navbar-perso></navbar-perso>
+
+<div class="w-full flex flex-col items-center justify-center mt-10 px-4">
+  <div class="w-full max-w-7xl flex flex-col justify-start mb-7">
+    <div class="mb-2">
+      <h1 class="text-3xl">Ajouter</h1>
+      <div class="title-deco w-full h-1 mt-2"></div>
+    </div>
+    <div class="w-full flex flex-row items-end mt-2">
+      <div class="w-1/3 mx-2">
+        <label for="nom" class="text-xl">Nom de la formation</label> <br>
+        <input type="text" class="rounded-2xl w-full px-3 text-xl" id="nom" style="border: 1px solid rgba(0,0,0,0.5)" placeholder="">
+      </div>
+      <div class="w-auto mx-2">
+        <label for="justificatif" class="text-xl">Flyer</label> <br>
+        <input id="justificatif" name="justificatif" type="file" accept=".gif,.jpg,.jpeg,.png,.doc,.docx,.pdf">
+      </div>
+      <div class="w-auto mx-2">
+        <button class="rounded-2xl px-4 py-1 font-bold text-white w-56" id="btn-formation" style="background-color: #294ED0">Envoyer</button>
+      </div>
+    </div>
+    <p class="text-red-500 text-lg hidden" id="erreur-nom">Merci de remplir le nom.</p>
+    <p class="text-green-500 text-lg hidden" id="success-send">Envoyé avec succès</p>
+  </div>
+
+  <div class="w-full max-w-7xl flex flex-col justify-start mb-10">
+    <div class="title-wrapper w-full">
+      <h1 class="text-3xl">Formations</h1>
+      <div class="title-deco w-full h-1 mt-2"></div>
+    </div>
+
+
+    <table id="table-info-admin">
+      <tr class="ligne-info h-12 pb-4">
+        <th class="font-bold text-xl align-middle">Nom de la formation</th>
+        <th class="font-bold text-xl align-middle">Flyers</th>
+        <th class="font-bold text-xl align-middle">Supprimer</th>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

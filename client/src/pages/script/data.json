@@ -1,0 +1,74 @@
+{
+  "users": [
+    {
+      "login": "Admin123",
+      "password": "P@ssw0rd!",
+      "nom": "Gray",
+      "prenom": "Martin",
+      "email": "martin.gray@example.com"
+    },
+    {
+      "login": "User456",
+      "password": "Pass123!@",
+      "nom": "Smith",
+      "prenom": "John",
+      "email": "john.smith@example.com"
+    },
+    {
+      "login": "SuperUser",
+      "password": "MyP@ssword123",
+      "nom": "Johnson",
+      "prenom": "Sarah",
+      "email": "sarah.johnson@example.com"
+    },
+    {
+      "login": "AdminUser",
+      "password": "!Password123",
+      "nom": "Davis",
+      "prenom": "Emily",
+      "email": "emily.davis@example.com"
+    },
+    {
+      "login": "User789",
+      "password": "SecurePwd$",
+      "nom": "Anderson",
+      "prenom": "Michael",
+      "email": "michael.anderson@example.com"
+    },
+    {
+      "login": "TestUser",
+      "password": "Pa$$w0rd",
+      "nom": "Wilson",
+      "prenom": "Olivia",
+      "email": "olivia.wilson@example.com"
+    },
+    {
+      "login": "User101112",
+      "password": "12345!@#$%",
+      "nom": "Taylor",
+      "prenom": "Sophia",
+      "email": "sophia.taylor@example.com"
+    },
+    {
+      "login": "PowerUser",
+      "password": "Passw0rd!",
+      "nom": "Brown",
+      "prenom": "Liam",
+      "email": "liam.brown@example.com"
+    },
+    {
+      "login": "User131415",
+      "password": "Qwerty123!",
+      "nom": "Jones",
+      "prenom": "Emma",
+      "email": "emma.jones@example.com"
+    },
+    {
+      "login": "Admin12345",
+      "password": "Secret123$",
+      "nom": "Miller",
+      "prenom": "Ava",
+      "email": "ava.miller@example.com"
+    }
+  ]
+}

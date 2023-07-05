@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Connexion - Lycée Schongauer</title>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../output.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Page de connexion pour le lycée Martin schongauer. C'est la page de connexion."/>
+    <link rel="stylesheet" type="text/css" href="./login.css"/>
+    <script type="module" src="../../dist/components/navbar/navbar.js"></script>
+    <script type="module" src="../../dist/pages/login/login.js"></script>
+</head>
+<body style="background-color: #F9FAFB">
+<navbar-perso></navbar-perso>
+
+<div id="web-login" class="mt-12 mb-3 flex w-full justify-center">
+    <div class="mx-auto w-5/6">
+        <h1 class="text-center text-4xl font-semibold sm:text-5xl">Connexion</h1>
+        <div id="web-login-deco" class="mt-5 w-full sm:mt-10"></div>
+    </div>
+</div>
+
+
+<section id="form-container" class="mt-7 sm:mt-10 flex w-full justify-center">
+    <form id="form-wrapper" class="flex flex-col items-center justify-center">
+
+        <div id="login-wrapper" class="flex flex-col items-center justify-center">
+            <p class="mb-4 text-3xl sm:text-4xl">Login</p>
+            <label>
+                <input id="login" autocomplete="username" type="text" name="login" placeholder="Dupont12" autofocus>
+            </label>
+        </div>
+
+        <div id="mdp-wrapper" class="mt-4 sm:mt-8 flex flex-col items-center justify-center">
+            <p class="mb-4 text-3xl sm:text-4xl">Mot de passe</p>
+            <label>
+                <input id="password" autocomplete="current-password" type="password" name="login" placeholder="•••••••">
+            </label>
+        </div>
+
+        <p class="text-red-500 mt-4 text-xl" id="error"></p>
+
+        <div id="bouton-login-container" class="mt-10 sm:mt-4 flex w-full justify-center">
+            <div id="bouton-login" class="sm:mx-3 flex w-full sm:w-1/2 justify-center rounded-3xl" style="background-color: #294ED0; min-width: 100px">
+                <button id="login-button" class="m-1 sm:m-2 text-center text-lg font-bold text-white">Se connecter</button>
+            </div>
+        </div>
+    </form>
+</section>
+
+
+</body>
+</html>

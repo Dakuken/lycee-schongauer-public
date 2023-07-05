@@ -1,0 +1,10 @@
+{
+    "configurations": [
+   {
+       "type": "npm",
+       "name": "Execute client snowpack",
+       "command": "cd client && npm run start",
+   },
+        
+    ]
+}

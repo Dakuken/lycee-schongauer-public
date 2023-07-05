@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Absence - Lycée Schongauer</title>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../output.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Page pour voir toutes les absences du lycée martin schongauer"/>
+    <link rel="stylesheet" type="text/css" href="./generale-gestion.css"/>
+    <script type="module" src="../../dist/components/navbar/navbar.js"></script>
+    <script type="module" src="../../dist/pages/gestion/absences.js"></script>
+</head>
+<body style="background-color: #F9FAFB">
+<navbar-perso></navbar-perso>
+
+<div class="w-full flex flex-col items-center justify-center mt-10 px-4">
+    <div class="w-full max-w-7xl flex flex-col justify-start">
+        <div id="title-wrapper" class="w-full">
+            <h1 class="text-3xl">Absences</h1>
+            <div class="title-deco w-full h-1 mt-2"></div>
+        </div>
+
+
+        <table id="table-info">
+            <tr class="ligne-info h-12 pb-4">
+                <th class="font-bold text-xl align-middle ">Nom</th>
+                <th class="font-bold text-xl align-middle">Prénom</th>
+                <th class="font-bold text-xl align-middle">Motif</th>
+                <th class="font-bold text-xl align-middle">Début absence</th>
+                <th class="font-bold text-xl align-middle">Fin absence</th>
+                <th class="font-bold text-xl align-middle">Pièce jointe</th>
+            </tr>
+        </table>
+        <button class="rounded-2xl px-4 py-1 font-bold text-white w-40 mt-10" id="btn-more" style="background-color: #294ED0">Plus d'absences</button>
+    </div>
+
+</div>
+
+</body>
+</html>

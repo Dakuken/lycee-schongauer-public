@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Élèves- Lycée Schongauer</title>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../output.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Page pour voir toutes les élèves du lycée martin schongauer"/>
+    <link rel="stylesheet" type="text/css" href="./generale-gestion.css"/>
+    <script type="module" src="../../dist/components/navbar/navbar.js"></script>
+    <script type="module" src="../../dist/pages/gestion/tous-eleves.js"></script>
+</head>
+<body style="background-color: #F9FAFB">
+<navbar-perso></navbar-perso>
+
+<div class="w-full flex flex-col items-center justify-center mt-10 px-4">
+    <div class="w-full max-w-7xl flex flex-col justify-start mb-7">
+        <div class="mb-2">
+            <h1 class="text-3xl">Rechercher</h1>
+            <div class="title-deco w-full h-1 mt-2"></div>
+        </div>
+        <div class="w-2/3 flex flex-row items-center mt-2">
+            <div>
+                <label for="nom" class="text-xl">Nom</label>
+                <input type="text" class="rounded-2xl w-2/3 px-3 text-xl" id="nom" style="border: 1px solid rgba(0,0,0,0.5)" placeholder="">
+            </div>
+            <div>
+                <label for="prenom" class="text-xl">Prenom</label>
+                <input type="text" class="rounded-2xl w-2/3 px-3 text-xl" id="prenom" style="border: 1px solid rgba(0,0,0,0.5)" placeholder="">
+            </div>
+            <div>
+                <button class="rounded-2xl px-4 py-1 font-bold text-white w-56" id="btn-search" style="background-color: #294ED0">Rechercher</button>
+            </div>
+        </div>
+        <p class="text-red-500 text-lg hidden" id="erreur-search">Merci de remplir au moins un des deux champs pour lancer une recherche.</p>
+
+        <br>
+        <br>
+
+        <div class="mb-2">
+            <h1 class="text-3xl">Ajouter un élève</h1>
+            <div class="title-deco w-full h-1 mt-2"></div>
+        </div>
+        <div class="w-full flex flex-row flex-wrap items-end mt-2">
+
+            <div class="w-1/3 mx-2">
+                <label for="nomEnvoie" class="text-xl">Nom</label>
+                <input type="text" class="rounded-2xl w-full px-3 text-xl" id="nomEnvoie" style="border: 1px solid rgba(0,0,0,0.5)" placeholder="">
+            </div>
+
+            <div class="w-1/3 mx-2">
+                <label for="prenomEnvoie" class="text-xl">Prénom</label>
+                <input type="text" class="rounded-2xl w-full px-3 text-xl" id="prenomEnvoie" style="border: 1px solid rgba(0,0,0,0.5)" placeholder="">
+            </div>
+
+            <div class="w-1/3 mx-2">
+                <label for="mail" class="text-xl">Email</label>
+                <input type="email" class="rounded-2xl w-full px-3 text-xl" id="mail" style="border: 1px solid rgba(0,0,0,0.5)" placeholder="">
+            </div>
+
+            <div class="w-1/3 mx-2">
+                <label for="login" class="text-xl">Login</label>
+                <input type="text" class="rounded-2xl w-full px-3 text-xl" id="login" style="border: 1px solid rgba(0,0,0,0.5)" placeholder="">
+            </div>
+
+            <div class="w-1/3 mx-2">
+                <label for="password" class="text-xl">Mot de passe</label>
+                <input type="text" class="rounded-2xl w-full px-3 text-xl" id="password" style="border: 1px solid rgba(0,0,0,0.5)" placeholder="">
+            </div>
+
+            <div class="w-1/3 mx-2">
+                <div id="sujet-wrapper-etat" class="flex w-full flex-row items-start justify-center sm:items-center sm:justify-start">
+                    <p class="mr-4 hidden text-2xl sm:flex">Administrateur :</p>
+
+                    <div class="mr-7 flex flex-row items-center justify-center sm:mr-11">
+                        <input type="radio" id="Non" name="isAdmin" value="0" class="relative top-0.5" checked>
+                        <label for="Non" class="ml-1 text-xl sm:text-2xl">Non</label>
+                    </div>
+                    <div class="flex flex-row items-center justify-center">
+                        <input type="radio" id="Oui" name="isAdmin" value="1" class="relative top-0.5">
+                        <label for="Oui" class="ml-1 text-xl sm:text-2xl">Oui</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+            <div class="w-auto mx-2">
+                <button class="rounded-2xl px-4 py-1 font-bold text-white w-56" id="btn-envoie-eleve" style="background-color: #294ED0">Envoyer</button>
+            </div>
+
+        <p class="text-red-500 text-xl" id="erreurAjoutEleve"> </p>
+
+    </div>
+
+    <div class="w-full max-w-7xl flex flex-col justify-start mb-10">
+        <div class="title-wrapper w-full">
+            <h1 class="text-3xl">Administrateurs</h1>
+            <div class="title-deco w-full h-1 mt-2"></div>
+        </div>
+
+
+        <table id="table-info-admin">
+            <tr class="ligne-info h-12 pb-4">
+                <th class="font-bold text-xl align-middle">Nom</th>
+                <th class="font-bold text-xl align-middle">Prénom</th>
+                <th class="font-bold text-xl align-middle">Mail</th>
+            </tr>
+        </table>
+        <button class="rounded-2xl px-4 py-1 font-bold text-white w-56 mt-10" id="btn-more-admin" style="background-color: #294ED0">Plus d'administrateur</button>
+    </div>
+
+    <div class="w-full max-w-7xl flex flex-col justify-start mb-10">
+        <div class="title-wrapper w-full">
+            <h1 class="text-3xl">Élèves</h1>
+            <div class="title-deco w-full h-1 mt-2"></div>
+        </div>
+
+
+        <table id="table-info-eleve">
+            <tr class="ligne-info h-12 pb-4">
+                <th class="font-bold text-xl align-middle">Nom</th>
+                <th class="font-bold text-xl align-middle">Prénom</th>
+                <th class="font-bold text-xl align-middle">Mail</th>
+            </tr>
+        </table>
+        <button class="rounded-2xl px-4 py-1 font-bold text-white w-56 mt-10" id="btn-more-eleve" style="background-color: #294ED0">Plus d'élèves</button>
+    </div>
+</div>
+
+</body>
+</html>

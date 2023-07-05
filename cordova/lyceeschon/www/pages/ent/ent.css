@@ -1,0 +1,30 @@
+body {
+    color: #000000;
+}
+
+
+.link-box {
+    border : solid 1px rgba(0, 0, 0, 0.2);
+    height : 40vw;
+    width: 40vw;
+    max-width: 200px;
+    max-height: 200px;
+
+}
+
+
+#web-ent {
+    display: inherit;
+}
+
+#web-ent-deco {
+    background-color: #294ED0;
+    height: 1px;
+}
+
+@media (max-width: 700px) {
+    #web-ent {
+        display: none;
+    }
+}
+

@@ -1,0 +1,132 @@
+body {
+    width: 100vw;
+    overflow-X: hidden;
+}
+
+.actu-choice_button, .actu-choice_button_mobile {
+    width: 100px;
+    height: 10px;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+}
+
+.active {
+    background-color: #294ED0;
+}
+
+.formation-container_info {
+    width: 200px;
+    height: 250px;
+    border-width: 1px;
+}
+
+.formation-effect {
+    width: 200px;
+    height: 3px;
+    background-color: #294ED0;
+    position: absolute;
+    bottom: 0;
+    transition: height 0.4s;
+}
+
+.formation-text {
+    color: #000000;
+    transition: color 0.5s;
+}
+
+.formation-container_info:hover .formation-effect {
+    height: 250px;
+}
+
+.formation-container_info:hover .formation-text {
+    color: #FFFFFF;
+}
+
+@media (max-width: 1200px) {
+    .formation-container_info {
+        height: 250px;
+        width: 160px;
+    }
+
+    .formation-effect {
+        width: 160px;
+    }
+
+    .formation-container_info:hover .formation-effect {
+        height: 250px;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .formation-container_info {
+        height: 200px;
+    }
+
+    .formation-container_info:hover .formation-effect {
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .formation-container_info, .formation-effect {
+        width: 140px;
+    }
+}
+
+@media (max-width: 750px) {
+    .formation-container_info, .formation-effect {
+        width: 120px;
+    }
+}
+
+
+#actu-mobile-container {
+    height: 250px;
+}
+
+
+@media (max-width: 700px) {
+    body {
+        color: #FFFFFF;
+    }
+
+    .actu-choice_button, .actu-choice_button_mobile {
+        width: 17vw;
+        max-width: 85px;
+        height: 5px;
+    }
+
+
+
+}
+
+#actu-mobile-container_shadow_wrapper {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.46) 80%);
+    border: 1px solid #FFFFFF;
+    text-shadow: 0px 2px 10px #000000;
+}
+
+#actu-mobile-container_shadow_wrapper > h1, #actu-mobile-container_shadow_wrapper > p {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.80);
+}
+
+#actu-mobile-container_shadow_wrapper > a > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.formation-mobile_item {
+    border: 1px solid rgba(0,0,0,0.2);
+
+    border-bottom: 2px solid #294ED0 ;
+    min-height: 70px;
+}
+
+#mobile {
+    max-width: 450px;
+}

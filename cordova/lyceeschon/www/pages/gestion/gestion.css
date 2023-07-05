@@ -1,0 +1,14 @@
+#web-gestion-deco {
+    background-color: #294ED0;
+    height: 1px;
+}
+
+
+.link-box {
+    border : solid 1px rgba(0, 0, 0, 0.2);
+    height : 40vw;
+    width: 40vw;
+    max-width: 200px;
+    max-height: 200px;
+
+}

@@ -1,0 +1,75 @@
+.vie-scolaire-deco {
+    background-color: #294ED0;
+    height: 1px;
+}
+
+input:not([type="radio"]) {
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+input:not([type="radio"]):focus, select {
+    border: none;
+    box-shadow: none;
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+
+input:where([type="radio"]) {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+
+.dateInput {
+    min-width: 200px;
+}
+
+.heureInput {
+    min-width: 100px;
+}
+
+select {
+    background-color: #F9FAFB;
+}
+
+@media (max-width: 450px) {
+    .dateInput {
+        min-width: 100px;
+        font-size: 13px;
+    }
+
+    .heureInput {
+        width: auto;
+        font-size: 13px;
+        min-width: 70px;
+        margin: 0;
+    }
+
+
+    input:not([type="radio"]) {
+        padding: 5px;
+        background-color: #F9FAFB;
+    }
+
+    .label {
+        margin: 0 10px ;
+    }
+}
+
+@media  (max-width: 300px) {
+    .label {
+        display: none;
+    }
+
+    input:not([type="radio"]) {
+        margin: 3px;
+    }
+}
+input[type="file"] {
+    border: none;
+    padding: 0;
+    border-radius: 0;
+}

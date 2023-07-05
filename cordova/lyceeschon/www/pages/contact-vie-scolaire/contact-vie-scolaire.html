@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Connexion - Lycée Schongauer</title>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="../../output.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Page de connexion pour le lycée Martin schongauer. C'est la page de connexion."/>
+    <link rel="stylesheet" type="text/css" href="contact-vie-scolaire.css"/>
+    <script type="module" src="../../dist/components/navbar/navbar.js"></script>
+    <script type="module" src="../../dist/pages/contact-vie-scolaire/contact-vie-scolaire.js"></script>
+</head>
+<body style="background-color: #F9FAFB">
+<navbar-perso></navbar-perso>
+
+<div id="web-vie-scolaire" class="mt-12 mb-3 hidden w-full justify-center sm:flex">
+    <div class="mx-auto w-5/6">
+        <h1 class="text-center text-3xl font-semibold sm:text-5xl">Formulaire de contact de la vie scolaire</h1>
+        <div class="mt-5 w-full vie-scolaire-deco sm:mt-10"></div>
+    </div>
+</div>
+
+<section id="form-container" class="mt-5 flex w-full justify-center sm:mt-10">
+    <form id="form-wrapper" class="flex w-5/6 max-w-4xl flex-col items-center justify-center">
+
+
+        <div id="infos-personnelles-container" class="w-full">
+            <div id="infos-personnelles-wrapper" class="mb-2) flex w-full justify-center sm:mt-3 sm:hidden">
+                <div class="mx-auto w-full">
+                    <h3 class="text-center text-2xl font-semibold">Informations</h3>
+                    <div class="mt-2 w-full vie-scolaire-deco sm:mt-10"></div>
+                </div>
+            </div>
+            <div id="form-wrapper-name" class="flex flex-col items-center sm:flex-row sm:items-center">
+                <p class="text-xl font-normal sm:mr-20 sm:text-2xl">Nom : <span class="text-lg font-semibold sm:text-2xl" id="nom"></span></p>
+                <p class="text-xl font-normal sm:text-2xl">Prénom : <span class="text-lg font-semibold sm:text-2xl" id="prenom"></span></p>
+            </div>
+        </div>
+
+        <div id="sujet-container" class="mt-2 flex w-full flex-col items-center justify-center sm:mt-6 sm:items-start sm:justify-start">
+            <div id="sujet-wrapper" class="mt-3 mb-2 flex w-full justify-center sm:hidden">
+                <div class="mx-auto w-full">
+                    <h3 class="text-center text-2xl font-semibold">Sujet</h3>
+                    <div class="mt-2 w-full vie-scolaire-deco sm:mt-10"></div>
+                </div>
+            </div>
+
+            <div id="sujet-wrapper-etat" class="flex w-full flex-row items-start justify-center sm:items-center sm:justify-start">
+                <p class="mr-4 hidden text-2xl sm:flex">Etat :</p>
+
+                <div class="mr-7 flex flex-row items-center justify-center sm:mr-11">
+                    <input type="radio" id="absence" name="absRetard" value="absence" class="relative top-0.5" checked>
+                    <label for="absence" class="ml-1 text-xl sm:text-2xl">Absence</label>
+                </div>
+                <div class="flex flex-row items-center justify-center">
+                    <input type="radio" id="retard" name="absRetard" value="retard" class="relative top-0.5">
+                    <label for="retard" class="ml-1 text-xl sm:text-2xl">Retard</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="date-container" class="mt-2 flex w-full flex-col items-center justify-center sm:mt-5">
+            <div id="date-wrapper_title" class="mt-3 mb-3 flex w-full justify-center sm:hidden">
+                <div class="mx-auto w-full">
+                    <h3 id="date-title" class="text-center text-2xl font-semibold">Date</h3>
+                    <h3 id="retard-title" class="hidden text-center text-2xl font-semibold">Durée</h3>
+                    <div class="mt-2 w-full vie-scolaire-deco sm:mt-10"></div>
+                </div>
+            </div>
+
+
+            <div id="retard-wrapper-form" class="hidden w-full flex-row items-center justify-center sm:items-start sm:justify-start">
+                <label for="retardSelect" class="mr-4 hidden text-2xl sm:flex"> Retard :</label>
+                <div id="retard-wrapper-choice" class="flex items-center sm:items-start flex-wrap justify-center sm:justify-start">
+                    <select id="retardSelect" class="mb-2 rounded-2xl bg-white px-2 text-lg sm:text-2xl">
+                        <option>5</option>
+                        <option>10</option>
+                        <option>15</option>
+                    </select>
+                    <p class="mx-4 text-2xl mb-2">minutes</p>
+                    <br>
+                    <p id="erreur-duree-retard" class="text-lg sm:text-xl text-red-500 hidden">Merci de renter un retard de 5, 10 ou 15 minutes</p>
+                    <div>
+                    <div id="date-choice_retard" class="mb-3 flex w-full items-start justify-center sm:justify-start">
+                        <label for="date-choice_retardDate" class="mr-3 text-xl label sm:text-2xl">
+                            - Date de début du cours :
+                        </label>
+                        <input id="date-choice_retardDate" type="datetime-local" name="date1" class="h-7 text-center text-xl dateInput sm:h-10" placeholder="graou" data-input>
+                    </div>
+                    <p id="erreur-date-retard" class="text-lg sm:text-xl text-red-500 hidden">Merci de remplir la date et l'heure du retard</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="date-wrapper-form" class="flex w-full flex-row items-start justify-center sm:items-start sm:justify-start">
+                <p class="mt-2 mr-4 hidden w-20 text-2xl sm:flex">Date :</p>
+                <div id="date-wrapper-choice" class="mt-1 flex w-full flex-col items-start justify-center">
+                    <div id="date-choice_text1" class="mb-3 flex w-full items-center justify-center sm:justify-start">
+                        <label for="date-choice_date1" class="mr-3 text-xl label sm:text-2xl">
+                            du
+                        </label>
+                        <input id="date-choice_date1" type="date" name="date1" class="h-7 text-center text-xl dateInput sm:h-10" placeholder="graou" data-input>
+
+                        <label for="date-choice_heure1" class="ml-3 text-xl label labela sm:text-2xl">
+                            à
+                        </label>
+                        <input id="date-choice_heure1" type="time" name="heure1" class="ml-3 h-7 text-center text-xl heureInput sm:h-10">
+                    </div>
+                    <p id="erreur-date-1" class="text-lg sm:text-xl text-red-500 hidden">Merci de remplir la date et l'heure du début de l'absence.</p>
+                    <div id="date-choice_text2" class="flex w-full items-center justify-center sm:mt-2 sm:ml-1 sm:justify-start">
+                        <label for="date-choice_date2" class="mr-3 text-xl label sm:text-2xl">
+                            au
+                        </label>
+                        <input id="date-choice_date2" name="date1" type="date" class="h-7 text-center text-xl dateInput sm:h-10">
+
+
+                        <label for="date-choice_heure2" class="ml-3 text-xl label labela sm:text-2xl">
+                            à
+                        </label>
+                        <input id="date-choice_heure2" name="heure1" type="time" class="ml-3 h-7 text-center text-xl heureInput sm:h-10">
+                    </div>
+                    <p id="erreur-date-2" class="text-lg sm:text-xl text-red-500 pt-1 hidden">Merci de remplir la date et l'heure de fin de l'absence.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="motif-container" class="mt-2 flex w-full flex-col items-center justify-center sm:mt-5">
+
+            <div id="motif-wrapper" class="mt-3 mb-4 flex w-full justify-center sm:hidden">
+                <div class="mx-auto w-full">
+                    <h3 class="text-center text-2xl font-semibold">Motif</h3>
+                    <div class="mt-3 w-full vie-scolaire-deco sm:mt-10"></div>
+                </div>
+            </div>
+
+
+            <div id="motif-wrapper-form" class="flex w-full items-center sm:items-start">
+                <p class="mr-4 hidden w-24 text-2xl sm:flex">Motif :</p>
+                <div id="motif-wrapper-choice" class="flex w-full flex-col flex-wrap items-start justify-center sm:mt-1 sm:flex-row sm:justify-start">
+                    <label class="mb-3 sm:mr-6 sm:mb-4">
+                        <select class="rounded-2xl bg-white px-2 text-lg sm:text-2xl" id="motif">
+                            <option>Maladie</option>
+                            <option>Rendez-vous médical</option>
+                            <option>Raison personnelle</option>
+                            <option>Transport</option>
+                            <option>Accident</option>
+                            <option>Autre</option>
+                        </select>
+                    </label>
+
+                    <label id="justificatifLabel" for="justificatif" class="mb-3 sm:mr-6 sm:mb-4">
+                        <input id="justificatif" name="justificatif" type="file" accept=".gif,.jpg,.jpeg,.png,.doc,.docx,.pdf">
+                    </label>
+
+                    <label for="autreInput" class="w-full sm:mt-2">
+                        <input placeholder="Ecrivez votre motif" type="text" id="autreInput" class="hidden w-full sm:mt-3">
+                    </label>
+                    <p id="erreur-autre" class="pt-2 text-red-600 hidden">Merci de précisez votre motif</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="bouton-vie-scolaire-container" class="mt-5 mb-5 flex w-full justify-center sm:mt-8 sm:justify-start">
+            <div id="bouton-valider" class="flex w-full cursor-pointer justify-center rounded-3xl sm:mx-3 sm:w-1/2" style="background-color: #294ED0; min-width: 100px">
+                <button class="m-1 text-center text-lg font-bold text-white sm:m-2">Valider</button>
+            </div>
+        </div>
+
+        <div class="flex justify-start w-full">
+            <p id="validation-text" class="text-xl font-bold"></p>
+        </div>
+    </form>
+</section>
+
+
+</body>
+</html>

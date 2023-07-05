@@ -1,0 +1,5 @@
+.snowpack
+build
+client/node_modules
+cordova/lyceeschon/node_modules
+server/info.php

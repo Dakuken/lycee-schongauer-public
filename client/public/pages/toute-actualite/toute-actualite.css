@@ -1,0 +1,38 @@
+.actualite {
+    border-bottom: 1px solid #000000;
+}
+
+.actu-mobile-container_shadow_wrapper {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.50) 100%);
+    border: 1px solid #FFFFFF;
+
+    text-shadow: 0px 2px 10px #000000;
+}
+
+.actu-mobile-container_shadow_wrapper > h1, .actu-mobile-container_shadow_wrapper > p {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.80);
+}
+
+
+@media (min-width: 678px) and ( max-width: 800px) {
+    .wrapper-text-actu {
+        -webkit-line-clamp: 3 !important;
+    }
+}
+
+
+
+
+/*? overwrite css properties from MBN */
+
+table > tbody > tr > td >table > tbody > tr > td >img {
+    display: none !important;
+}
+
+@media (max-width: 700px) {
+
+    table > tbody > tr > td {
+        color: #FFFFFF !important;
+        background: none !important;
+    }
+}
